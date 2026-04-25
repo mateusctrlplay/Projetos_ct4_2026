@@ -9,4 +9,15 @@ public class meumenuinsertexto : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+    public void Quit()
+        Application.Quit();
+    }
+    public void credtis()
+    {
+        SceneManager.LoadScene("credits");
+    }
+    public void credtis()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
