@@ -5,8 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class menoo : MonoBehaviour
 {
-    public Void startGame(){
-        SceneManager . loadScene("SampleScene");
+    public void startGame(){
+        SceneManager.LoadScene("SampleScene");
+    }
+    public void  Reconhecimento(){
+        SceneManager.LoadScene("Credits");
+    }
+    public void  Quit(){
+        Application.Quit();
+    }
+    public void Sair(){
+        SceneManager.LoadScene("MainMenu");
     }
 }
+
+
 
