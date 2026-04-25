@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class mainmenu : MonoBehaviour
 {
 
-    public Void StartGame(){
+    public void StartGame(){
     
     }
     
     // Update is called once per frame
     void Update()
     {
-        
+       SceneManager.Load    
     }
 }
