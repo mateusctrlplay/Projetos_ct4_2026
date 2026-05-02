@@ -24,6 +24,33 @@ public class ControleDeJogador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    if (Input.GetMouseButtonDown(0)){
+
+       Vector3 origem = transform.position;
+       Vector3 direcao = transform.forward;
+       Ray ray = new Ray(origem, direcao);
+
+       RaycastHit informacao;
+       bool hit = Physics.Raycast(ray, out informacao);
+       Debug.Log(informacao.collider);
+
+    if (informacao.collider.CompareTag("Enemy")){
+
+        Debug.Log("Acertei o inimigo!");
+
+
+
+    }
+
+
+
+
+
+
+    }
+
+
         float x = Input.GetAxis("Horizontal"); // -1 ou +1
         float z = Input.GetAxis("Vertical"); // -1 ou +1
 
