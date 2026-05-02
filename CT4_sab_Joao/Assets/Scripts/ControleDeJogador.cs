@@ -26,6 +26,23 @@ public class ControleDeJogador : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetMouseButtonDown(0)){
+
+            Vector3 origem = transform.position;
+            Vector3 direcao = transform.forward;
+            Ray ray = new Ray(origem, direcao);
+
+            RaycastHit informacao;
+            bool hit = Physics.Raycast(ray, out informacao);
+
+            Debug.Log(informacao.collider);
+
+            if (informacao.collider.CompareTag("Enemy")){
+                Debug.Log("Acertei o inimigo!");
+            }
+
+        }
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
